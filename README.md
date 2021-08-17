@@ -27,6 +27,14 @@ Expected Output:
 pizzaOrder.size = 0;
 pizzaOrder.topping = 0;
 pizzaOrder.price = 0;
+
+Describe: Pizza.prototype.calculatePrice()
+Test: "It should return 0"
+Code:
+let PizzaOrder = new Pizza (0, 0)
+PizzaOrder.calculatePrice();
+Expected Output:
+PizzaOrder.price = 0
 ```
 
 ## Known Bugs
