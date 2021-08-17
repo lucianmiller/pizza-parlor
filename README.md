@@ -31,7 +31,7 @@ pizzaOrder.price = 0;
 Describe: Pizza.prototype.calculatePrice()
 Test: "It should return 0"
 Code:
-let PizzaOrder = new Pizza (0, 0)
+let PizzaOrder = new Pizza (3, 2)
 PizzaOrder.calculatePrice();
 Expected Output:
 PizzaOrder.price = 0
