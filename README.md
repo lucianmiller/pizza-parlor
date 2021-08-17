@@ -31,10 +31,24 @@ pizzaOrder.price = 0;
 Describe: Pizza.prototype.calculatePrice()
 Test: "It should return 0"
 Code:
-let PizzaOrder = new Pizza (3, 2)
-PizzaOrder.calculatePrice();
+let pizzaOrder = new Pizza (0, 0);
+pizzaOrder.calculatePrice();
 Expected Output:
-PizzaOrder.price = 0
+pizzaOrder.price = 0;
+
+Describe: Pizza.prototype.calculatePrice()
+Test: "It should calculate price for the size of pizza"
+Code:
+let pizzaOrder = new Pizza (3, 0);
+pizzaOrder.calculatePrice();
+Expected Output: pizzaOrder.price = 10;
+
+Describe: Pizza.prototype.calculatePrice()
+Test: "It should calculate price for the size and topping of pizza"
+Code:
+let pizzaOrder = new Pizza (3, 2);
+pizzaOrder.calculatePrice();
+Expected Output: pizzaOrder.price = 14;
 ```
 
 ## Known Bugs
