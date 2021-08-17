@@ -6,5 +6,20 @@ function Pizza(size, topping) {
 }
 
 Pizza.prototype.calculatePrice = function() {
-  return 0;
+  if (this.size === 1) {
+    this.price += 5;
+  } else if (this.size === 2) {
+    this.price += 7;
+  } else {
+    this.price += 10;
+  };
+  if (this.topping === 1) {
+    this.price += 2;
+  } else if (this.topping === 2) {
+    this.price += 4;
+  } else if (this.topping === 3) {
+    this.price += 6;
+  } else {
+    this.price += 8;
+  };
 }
