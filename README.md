@@ -1,6 +1,6 @@
 # Pizza Parlor
 
-#### Object-Oriented JavaScript Independent Project for Epicodus, 8/17/2021
+#### Object-Oriented JavaScript Independent Project for Epicodus, 8/18/2021
 
 #### By Lucian Miller
 
