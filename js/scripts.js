@@ -23,3 +23,12 @@ Pizza.prototype.calculatePrice = function() {
     this.price += 8;
   };
 }
+
+//UI logic---------------
+$(document).ready(function() {
+  $("form#order").submit(function(event) {
+    event.preventDefault();
+    const selectedSize = parseInt($("#size").val());
+    const selectedTopping = parseInt($("#toppings").val());
+  });
+});
