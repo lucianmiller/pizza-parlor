@@ -25,6 +25,11 @@ Pizza.prototype.calculatePrice = function() {
 }
 
 //UI logic---------------
+function showPrice(price) {
+  $("#show-price").show();
+  $("#total-price").html("$" + price.toFixed(2));
+}
+
 $(document).ready(function() {
   $("form#order").submit(function(event) {
     event.preventDefault();
@@ -33,5 +38,9 @@ $(document).ready(function() {
 
     $("input#size").val("");
     $("input#toppings").val("");
+
+    let userOrder = new Pizza(selectedSize, selectedTopping)
+    userOrder.calculatePrice();
+    showPrice(userOrder.price);
   });
 });
