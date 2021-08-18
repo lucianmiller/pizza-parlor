@@ -30,5 +30,8 @@ $(document).ready(function() {
     event.preventDefault();
     const selectedSize = parseInt($("#size").val());
     const selectedTopping = parseInt($("#toppings").val());
+
+    $("input#size").val("");
+    $("input#toppings").val("");
   });
 });
