@@ -1,6 +1,7 @@
 body {
-  background-color: #fcaa9a;
-  color: #635800;
+  background-color: #c90404;
+  color: #ffffff;
+  text-shadow: 2px 2px #000000;
 }
 
 #show-price {
@@ -9,4 +10,12 @@ body {
 
 #total-price {
   font-size: large;
+}
+
+.jumbotron {
+  background-color: #e1eb5e;
+}
+
+.btn {
+  color: #000000;
 }
