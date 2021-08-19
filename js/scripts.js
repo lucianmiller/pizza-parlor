@@ -1,7 +1,7 @@
 //Business Logic---------
-function Pizza(size, topping) {
+function Pizza(size, toppings) {
   this.size = size;
-  this.topping = topping;
+  this.toppings = toppings;
   this.price = 0;
 }
 
@@ -34,12 +34,12 @@ $(document).ready(function() {
   $("form#order").submit(function(event) {
     event.preventDefault();
     const selectedSize = parseInt($("#size").val());
-    const selectedTopping = parseInt($("#toppings").val());
+    const selectedToppings = parseInt($("#toppings").val());
 
     $("input#size").val("");
     $("input#toppings").val("");
 
-    let userOrder = new Pizza(selectedSize, selectedTopping)
+    let userOrder = new Pizza(selectedSize, selectedToppings)
     userOrder.calculatePrice();
     showPrice(userOrder.price);
   });
