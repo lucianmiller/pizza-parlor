@@ -17,7 +17,7 @@ Pizza.prototype.calculatePrice = function() {
   } else {
     this.price += 10;
   };
-
+  this.price += (this.toppings.length * 0.5);
 }
 
 //UI logic---------------
