@@ -28,6 +28,14 @@ pizzaOrder.size = 0;
 pizzaOrder.topping = 0;
 pizzaOrder.price = 0;
 
+Describe: Pizza.prototype.addTopping()
+Test: "It should push toppings into this.toppings"
+Code:
+let pizzaOrder = new Pizza (0, 3)
+pizzaOrder.addTopping();
+Expected Output: 
+pizzaOrder.price = [3];
+
 Describe: Pizza.prototype.calculatePrice()
 Test: "It should return 0"
 Code:
