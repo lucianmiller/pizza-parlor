@@ -22,7 +22,7 @@ Come to the Pizza Parlor and order yourself a wonderful Pizza! We have many size
 Describe: Pizza()
 Test: "It should create a Pizza object with properties of size, topping and price equaling 0"
 Code: 
-let pizzaOrder = new Pizza(0, 0);
+let pizzaOrder = new Pizza(0);
 Expected Output: 
 pizzaOrder.size = 0;
 pizzaOrder.topping = 0;
@@ -31,15 +31,15 @@ pizzaOrder.price = 0;
 Describe: Pizza.prototype.addTopping()
 Test: "It should push toppings into this.toppings"
 Code:
-let pizzaOrder = new Pizza (0, 3)
-pizzaOrder.addTopping();
+let pizzaOrder = new Pizza (0)
+pizzaOrder.addTopping(3);
 Expected Output: 
 pizzaOrder.price = [3];
 
 Describe: Pizza.prototype.calculatePrice()
 Test: "It should return 0"
 Code:
-let pizzaOrder = new Pizza (0, 0);
+let pizzaOrder = new Pizza (0);
 pizzaOrder.calculatePrice();
 Expected Output:
 pizzaOrder.price = 0;
@@ -47,14 +47,14 @@ pizzaOrder.price = 0;
 Describe: Pizza.prototype.calculatePrice()
 Test: "It should calculate price for the size of pizza"
 Code:
-let pizzaOrder = new Pizza (3, 0);
+let pizzaOrder = new Pizza (3);
 pizzaOrder.calculatePrice();
 Expected Output: pizzaOrder.price = 10;
 
 Describe: Pizza.prototype.calculatePrice()
 Test: "It should calculate price for the size and topping of pizza"
 Code:
-let pizzaOrder = new Pizza (3, 2);
+let pizzaOrder = new Pizza (3);
 pizzaOrder.calculatePrice();
 Expected Output: pizzaOrder.price = 14;
 ```
