@@ -11,7 +11,7 @@ Come to the Pizza Parlor and order yourself a wonderful Pizza! We have many size
 ## Setup/Installation Requirements
 
 * Clone this Repository
-* Open File
+* Open Project Folder
 * Open index.html
 * Select your toppings and size
 * Press the order button
@@ -56,7 +56,7 @@ Test: "It should calculate price for the size and topping of pizza"
 Code:
 let pizzaOrder = new Pizza (3);
 pizzaOrder.calculatePrice();
-Expected Output: pizzaOrder.price = 14;
+Expected Output: pizzaOrder.price = 10.50;
 ```
 
 ## Known Bugs
