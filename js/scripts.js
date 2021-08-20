@@ -1,8 +1,12 @@
 //Business Logic---------
-function Pizza(size, toppings) {
+function Pizza(size) {
   this.size = size;
-  this.toppings = toppings;
+  this.toppings = [];
   this.price = 0;
+}
+
+Pizza.prototype.addTopping = function(topping) {
+  this.toppings.push(topping);
 }
 
 Pizza.prototype.calculatePrice = function() {
@@ -13,15 +17,7 @@ Pizza.prototype.calculatePrice = function() {
   } else {
     this.price += 10;
   };
-  if (this.topping === 1) {
-    this.price += 2;
-  } else if (this.topping === 2) {
-    this.price += 4;
-  } else if (this.topping === 3) {
-    this.price += 6;
-  } else {
-    this.price += 8;
-  };
+
 }
 
 //UI logic---------------
@@ -34,12 +30,17 @@ $(document).ready(function() {
   $("form#order").submit(function(event) {
     event.preventDefault();
     const selectedSize = parseInt($("#size").val());
-    const selectedToppings = parseInt($("#toppings").val());
+
+    let userOrder = new Pizza(selectedSize)
+
+    $("input:checkbox[name=toppings]:checked").each(function(){
+      const toppingsList = $(this).val();
+      userOrder.addTopping(toppingsList);
+    });
 
     $("input#size").val("");
     $("input#toppings").val("");
 
-    let userOrder = new Pizza(selectedSize, selectedToppings)
     userOrder.calculatePrice();
     showPrice(userOrder.price);
   });
