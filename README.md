@@ -34,15 +34,16 @@ Code:
 let pizzaOrder = new Pizza (0)
 pizzaOrder.addTopping(3);
 Expected Output: 
-pizzaOrder.price = [3];
+pizzaOrder.toppings = [3];
 
 Describe: Pizza.prototype.calculatePrice()
-Test: "It should return 0"
+Test: "It should return 10.5 when no size or topping has been added."
 Code:
 let pizzaOrder = new Pizza (0);
+pizzaOrder.addTopping();
 pizzaOrder.calculatePrice();
 Expected Output:
-pizzaOrder.price = 0;
+pizzaOrder.price = 10.5;
 
 Describe: Pizza.prototype.calculatePrice()
 Test: "It should calculate price for the size of pizza"
@@ -54,9 +55,10 @@ Expected Output: pizzaOrder.price = 10;
 Describe: Pizza.prototype.calculatePrice()
 Test: "It should calculate price for the size and topping of pizza"
 Code:
-let pizzaOrder = new Pizza (3);
+let pizzaOrder = new Pizza (2);
+pizzaOrder.addTopping(2);
 pizzaOrder.calculatePrice();
-Expected Output: pizzaOrder.price = 10.50;
+Expected Output: pizzaOrder.price = 7.5;
 ```
 
 ## Known Bugs
